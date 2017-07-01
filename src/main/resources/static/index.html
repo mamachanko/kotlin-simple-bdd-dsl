@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Click me</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+        html, body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            height: 100%;
+        }
+
+        #container {
+            font-family: 'Roboto Slab', sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #clickMe {
+            border: thin solid cornsilk;
+            background-color: salmon;
+            padding: 8px 24px;
+            margin-bottom: 24px;
+        }
+
+        #clickMe:hover {
+            cursor: pointer;
+        }
+
+        #message {
+            height: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="clickMe"
+                onclick="showThankYou()">
+            click me
+        </div>
+        <div id="message" />
+        <script>
+            function showThankYou() {
+                const thankYou = 'Thank you for clicking!';
+                const messageElement = document.getElementById('message');
+                messageElement.innerText = thankYou;
+            };
+        </script>
+    </div>
+</body>
+</html>
